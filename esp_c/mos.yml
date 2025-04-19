@@ -1,0 +1,53 @@
+author: mongoose-os
+description: kitchen hood
+# arch: PLATFORM
+version: 1.0
+manifest_version: 2017-05-18
+libs_version: 2.19.1
+modules_version: 2.19.1
+mongoose_os_version: 2.19.1
+
+config_schema:
+ - ["app", "o", {title: "kitchen hood"}]
+ - ["app.sensor_read_interval_ms", "i", 60000, {title: "How often (in milliseconds) to check sensor reading"}]
+ - ["app.wdTimer", "i", -1, {title: "WD update interval"}]
+ - ["app.WDDonePin", "i", -1, {title: "watch dog done pin"}]
+ - ["app.gpio_light_pin", "i", -1, {title: "gpio_light_pin pin"}]
+ - ["app.gpio_vent_pin", "i", -1, {title: "gpio_vent_pin pin"}]
+ - ["app.gpio_wire_pin", "i", -1, {title: "gpio_wire_pin pin"}]
+ - ["app.dt_level", "i", -1, {title: "delta T for swith on  hood"}]
+ - ["app.minram", "i", -1, {title: "minimum ram size"}]
+ - ["device.id", "s","hood_??????", {title: "id"}]
+
+
+
+tags:
+  - c
+
+filesystem:
+  - fs
+
+sources:
+  - src
+
+libs:
+  - origin: https://github.com/mongoose-os-libs/rpc-service-config
+  - origin: https://github.com/mongoose-os-libs/rpc-service-fs
+  - origin: https://github.com/mongoose-os-libs/rpc-uart
+  - origin: https://github.com/mongoose-os-libs/wifi
+  - origin: https://github.com/mongoose-os-libs/boards
+  - origin: https://github.com/mongoose-os-libs/mjs
+  - origin: https://github.com/mongoose-os-libs/ca-bundle
+  - origin: https://github.com/mongoose-os-libs/core
+  - origin: https://github.com/mongoose-os-libs/dash
+  # - origin: https://github.com/mongoose-os-libs/fstab
+  - origin: https://github.com/mongoose-os-libs/http-server
+  - origin: https://github.com/mongoose-os-libs/rpc-service-ota
+  - origin: https://github.com/mongoose-os-libs/rpc-ws
+  - origin: https://github.com/mongoose-os-libs/arduino-onewire
+  - origin: https://github.com/mongoose-os-libs/shadow
+  - origin: https://github.com/mongoose-os-libs/sntp
+  - origin: https://github.com/mongoose-os-libs/arduino-dallas-temperature
+  - origin: https://github.com/mongoose-os-libs/ota-shadow
+  - origin: https://github.com/mongoose-os-libs/provision
+

@@ -1,0 +1,81 @@
+{
+	"wifi": {
+		"ap": {
+			"enable": true,
+			"ssid": "HOOD_??????",
+			"pass": "12345678",
+			"hidden": false,
+			"channel": 6,
+			"max_connections": 10,
+			"ip": "192.168.4.1",
+			"netmask": "255.255.255.0",
+			"gw": "192.168.4.1",
+			"dhcp_start": "192.168.4.2",
+			"dhcp_end": "192.168.4.100",
+			"trigger_on_gpio": -1,
+			"disable_after": 0,
+			"hostname": "",
+			"keep_enabled": true,
+			"bandwidth_20mhz": false
+		},
+		"sta":{
+			"enable":false
+		}
+	},
+	"sntp": {
+		"enable": true,
+		"server": "time.google.com",
+		"retry_min": 1,
+		"retry_max": 30,
+		"update_interval": 12000
+	},
+	"sys":{
+		"tz_spec": "UTC-3"
+	},
+	"bt": {
+		"enable": false
+	},
+	"device": {
+		"id": "HOOD_??????"
+	},
+	"i2c": {
+		"enable": false,
+		"sda_gpio": 4,
+		"scl_gpio": 5
+	},
+	"dash": {
+		"enable": true,
+		"token": "XXXXXXXXXXXXXXX"
+	},
+	"app": {
+		"minram": 20000,
+		"wdTimer": 60000,
+		"WDDonePin": 15,
+		"gpio_light_pin":13,
+		"gpio_vent_pin": 14,
+		"gpio_wire_pin": 12,
+		"sensor_read_interval_ms": 150000,
+		"dt_level": 15
+
+
+	},
+	"provision": {
+		"btn": {
+			"pin": 0,
+			"pull_up": true,
+			"hold_ms": 3000
+		},
+		"led": {
+			"pin": 2,
+			"active_high": true
+		},
+		"stable_state": 2,
+		"timeout": 300,
+		"max_state": 2
+	},
+	"http":{
+		"hidden_files":"*.json,*.pem",
+		"enable":true 
+	}
+
+}
