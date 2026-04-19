@@ -1,7 +1,7 @@
 author: mongoose-os
 description: kitchen hood
 # arch: PLATFORM
-version: 1.0
+version: 1.1
 manifest_version: 2017-05-18
 libs_version: 2.19.1
 modules_version: 2.19.1
